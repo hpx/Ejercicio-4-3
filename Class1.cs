@@ -15,15 +15,38 @@ namespace Ejercicio_4_3_16
             this.peso16 = peso;
         }
 
-        public int peso16;
-        public int altura16;
-        public string colorOjos16;
-        public string colorPelo16;
+        private int peso16;
+        public int Peso16
+        {
+            get { return peso16; }
+            set { peso16 = value; }
+        }
+
+        private int altura16;
+       public int Altura16
+        {
+            get { return altura16; }
+            set { altura16 = value; }
+        }
+
+        private string colorOjos16;
+        public string ColorOjos16
+        {
+            get { return colorOjos16; }
+            set { colorOjos16 = value; }
+        }
+
+        private string colorPelo16;
+       public string ColorPelo16
+        {
+            get { return colorPelo16; }
+            set { colorPelo16 = value; }
+        }
 
         public void PonerLentillas16(string colorLentillas)
         {
             if (comprobarColor16(colorLentillas))
-                this.colorOjos16 = colorLentillas;
+                this.ColorOjos16 = colorLentillas;
         }
 
         private static bool comprobarColor16(string colorLentillas)
@@ -33,7 +56,7 @@ namespace Ejercicio_4_3_16
 
         public void Engordar16(int cantidad)
         {
-            int nuevo_peso = this.peso16 + cantidad;
+            int nuevo_peso = this.Peso16 + cantidad;
             if (nuevo_peso > 180)
             {
                 Console.WriteLine("Cantidad incorrecta");
@@ -41,13 +64,13 @@ namespace Ejercicio_4_3_16
             else
             {
                 Console.WriteLine("Incrementando el peso en {0} kg", cantidad);
-                this.peso16 = nuevo_peso;
+                this.Peso16 = nuevo_peso;
             }
         }
 
         public void Adelgazar16(int cantidad)
         {
-            int nuevo_peso = this.peso16 - cantidad;
+            int nuevo_peso = this.Peso16 - cantidad;
             if (nuevo_peso < 40)
             {
                 Console.WriteLine("Cantidad incorrecta");
@@ -55,7 +78,7 @@ namespace Ejercicio_4_3_16
             else
             {
                 Console.WriteLine("Reduciendo el peso en {0} kg", cantidad);
-                this.peso16 = nuevo_peso;
+                this.Peso16 = nuevo_peso;
             }
         }
     }
