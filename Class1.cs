@@ -22,17 +22,41 @@ namespace Ejercicio_4_3_16
 
         public void PonerLentillas16(string colorLentillas)
         {
+            if (comprobarColor16(colorLentillas))
+                this.colorOjos16 = colorLentillas;
+        }
 
+        private static bool comprobarColor16(string colorLentillas)
+        {
+            return colorLentillas.Equals("azul") || colorLentillas.Equals("marrón") || colorLentillas.Equals("verde");
         }
 
         public void Engordar16(int cantidad)
         {
-
+            int nuevo_peso = this.peso16 + cantidad;
+            if (nuevo_peso > 180)
+            {
+                Console.WriteLine("Cantidad incorrecta");
+            }
+            else
+            {
+                Console.WriteLine("Incrementando el peso en {0} kg", cantidad);
+                this.peso16 = nuevo_peso;
+            }
         }
 
-        public void Adelgazar16(double cantidad)
+        public void Adelgazar16(int cantidad)
         {
-
+            int nuevo_peso = this.peso16 - cantidad;
+            if (nuevo_peso < 40)
+            {
+                Console.WriteLine("Cantidad incorrecta");
+            }
+            else
+            {
+                Console.WriteLine("Reduciendo el peso en {0} kg", cantidad);
+                this.peso16 = nuevo_peso;
+            }
         }
     }
 }
